@@ -1,0 +1,10 @@
+body {
+  margin: unset;
+  display: unset;
+}
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

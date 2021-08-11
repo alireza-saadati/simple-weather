@@ -1,0 +1,28 @@
+.header {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  height: 250px;
+  padding-top: 80px;
+  color: #ffffff;
+  //padding-right: 30px;
+}
+
+.verify--mobile-input {
+  display: grid;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.global-input-style {
+  color: #fff;
+  height: 40px;
+  margin-top: 3vh;
+  text-align: right;
+  background-color: unset;
+  border: none;
+  border-bottom: 1px solid #efefef;
+  &::placeholder {
+    color: #fff;
+  }
+}
