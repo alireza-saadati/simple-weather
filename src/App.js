@@ -11,7 +11,7 @@ function App() {
       <Route component={VerifyPage} path={"/verify"} />
       <Route component={WeatherPage} path={"/"} exact />
       {/* add not found (404) component */}
-      {/*<Route component={WeatherPage} />*/}
+      <Route component={WeatherPage} />
     </Router>
   );
 }
