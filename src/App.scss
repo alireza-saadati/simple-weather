@@ -8,3 +8,24 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
+.global-input {
+  color: #ffffff;
+  height: 40px;
+  width: 280px;
+  margin: 10px 0.5px 0 0;
+  border: none;
+  border-bottom: 1px solid #efefef;
+  text-align: right;
+  padding-right: 3vh;
+  padding-left: 3vh;
+  background-color: unset;
+
+  &::placeholder {
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
