@@ -1,8 +1,49 @@
-.search--box {
+.search-box {
   text-align: center;
+  padding-top: 12vh;
 
   .header {
     height: 250px;
     padding-top: 80px;
+  }
+
+  .global-button {
+    padding-top: 5vh;
+
+    .first-button {
+      transition-duration: 600ms;
+
+      &:hover {
+        transform: scale(1.1) rotate(-3deg);
+        transition: all 0.6s ease-in-out 0s;
+      }
+    }
+  }
+
+  .global-output {
+    padding-top: 10vh;
+    color: #ffffff;
+    width: 100%;
+
+    .first-line {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .second-line {
+      display: flex;
+      justify-content: space-evenly;
+      padding-top: 5vh;
+    }
+    .global-output--box {
+      display: flex;
+      justify-content: center;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+
+      .global-output--text {
+        padding-bottom: 1vh;
+      }
+    }
   }
 }

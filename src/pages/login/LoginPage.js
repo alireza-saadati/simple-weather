@@ -1,6 +1,5 @@
 import "./loginPage.style.scss";
 import { useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import Container from "../../components/container/Container";
 import Error from "../../components/error/Error";
 
@@ -12,8 +11,6 @@ const LoginPage = () => {
 
   const handleMobileChange = (event) => setMobile(event.target.value);
 
-  const history = useHistory();
-
   const onSubmit = (event) => {
     event.preventDefault();
     if (mobile.length === 11 && showOtpInput && otpCode) {
@@ -21,9 +18,9 @@ const LoginPage = () => {
       localStorage.setItem("mobile", mobile);
       // 1. set otpCode in local storage
       localStorage.setItem("access_token", otpCode);
-      history.push("/");
+      window.location.pathname = "/";
+      // history.push("/");
     } else if (mobile.length === 11) {
-      console.log("2. showOtpInput");
       setShowOtpInput(true);
     } else {
       setShowError(true);
@@ -38,7 +35,7 @@ const LoginPage = () => {
           <input
             maxLength={11}
             className="global-input"
-            placeholder="شماره موبایل خود را وارد کنید"
+            placeholder="Enter your mobile number"
             onChange={handleMobileChange}
             value={mobile}
           />
@@ -55,7 +52,7 @@ const LoginPage = () => {
             Send
           </button>
         </form>
-        {showError && <Error text="!شماره موبایل صحیح نیست" />}
+        {showError && <Error text="Mobile number is incorrect!" />}
       </div>
     </Container>
   );

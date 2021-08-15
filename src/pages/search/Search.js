@@ -61,57 +61,96 @@ const Search = () => {
 
   return (
     <Container style={{ background: "#e85063" }}>
-      <div className="search--box">
+      <div className="search-box">
         <input
           id="global-input"
           className="global-input"
-          placeholder="شهر را وارد کنید"
+          placeholder="Enter the city"
           onChange={(event) => setCountryName(event.target.value)}
         />
-        <button
-          className="button"
-          onClick={fetchCountriesList}
-          style={{ margin: "0 auto", marginTop: "2rem" }}
-        >
-          Search
-        </button>
-        <button
-          className="button"
-          onClick={getMyLocation}
-          style={{ margin: "0 auto", marginTop: "2rem" }}
-        >
-          find my location
-        </button>
-        <button
-          className="button"
-          onClick={handleReset}
-          style={{ margin: "0 auto", marginTop: "2rem" }}
-        >
-          Reset
-        </button>
-        country:
-        <div>
-          {weatherResult && weatherResult.sys && weatherResult.sys.country}
+
+        <div className="global-button">
+          <button
+            className="button first-button"
+            onClick={fetchCountriesList}
+            style={{ margin: "0 auto", marginTop: "2rem" }}
+          >
+            Search
+          </button>
+          <button
+            className="button"
+            onClick={getMyLocation}
+            style={{ margin: "0 auto", marginTop: "2rem" }}
+          >
+            find my location
+          </button>
+          <button
+            className="button"
+            onClick={handleReset}
+            style={{ margin: "0 auto", marginTop: "2rem" }}
+          >
+            Reset
+          </button>
         </div>
-        temp:
-        <div>
-          {weatherResult && weatherResult.main && weatherResult.main.temp}
-        </div>
-        sea level:
-        <div>
-          {weatherResult && weatherResult.main && weatherResult.main.sea_level}
-        </div>
-        pressure:
-        <div>
-          {weatherResult && weatherResult.main && weatherResult.main.pressure}
-        </div>
-        wind speed:
-        <div>
-          {weatherResult && weatherResult.wind && weatherResult.wind.speed}
-        </div>
-        humidity:
-        <div>
-          {weatherResult && weatherResult.main && weatherResult.main.humidity}
+        <div className="global-output">
+          <div className="first-line">
+            <div className="global-output--box">
+              <div className="global-output--title">Country:&nbsp;</div>
+              <div className="global-output--text">
+                {(weatherResult &&
+                  weatherResult.sys &&
+                  weatherResult.sys.country) ||
+                  " -"}
+              </div>
+            </div>
+            <div className="global-output--box">
+              <div className="global-output--title">Temp:&nbsp;</div>
+              <div className="global-output--text">
+                {(weatherResult &&
+                  weatherResult.main &&
+                  weatherResult.main.temp) ||
+                  " -"}
+              </div>
+            </div>
+            <div className="global-output--box">
+              <div className="global-output--title">Sea Level:&nbsp;</div>
+              <div className="global-output--text">
+                {(weatherResult &&
+                  weatherResult.main &&
+                  weatherResult.main.sea_level) ||
+                  " -"}
+              </div>
+            </div>
+          </div>
+          <div className="second-line">
+            <div className="global-output--box">
+              <div className="global-output--title">Pressure:&nbsp;</div>
+              <div className="global-output--text">
+                {(weatherResult &&
+                  weatherResult.main &&
+                  weatherResult.main.pressure) ||
+                  " -"}
+              </div>
+            </div>
+            <div className="global-output--box">
+              <div className="global-output--title">Wind Speed:&nbsp;</div>
+              <div className="global-output--text">
+                {(weatherResult &&
+                  weatherResult.wind &&
+                  weatherResult.wind.speed) ||
+                  " -"}
+              </div>
+            </div>
+            <div className="global-output--box">
+              <div className="global-output--title">Humidity:&nbsp;</div>
+              <div className="global-output--text">
+                {(weatherResult &&
+                  weatherResult.main &&
+                  weatherResult.main.humidity) ||
+                  " -"}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {showError && <Error text={errorText} />}
