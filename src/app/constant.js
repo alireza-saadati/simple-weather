@@ -223,4 +223,9 @@ export const Countries = [
   "Zimbabwe",
 ];
 
-export const openWeatherApiKey = "f5a7148cafb8c935c69191fec35a034d";
+export const Config = {
+  openWeatherApiKey: "f5a7148cafb8c935c69191fec35a034d",
+  baseUrl: "https://api.openweathermap.org/",
+  prefix: "data/",
+  apiVersionPrefix: "2.5/",
+};

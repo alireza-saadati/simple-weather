@@ -1,15 +1,18 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import "./App.scss";
+import { BrowserRouter as Router } from "react-router-dom";
 import LoginPage from "./pages/login/LoginPage";
 import Search from "./pages/search/Search";
 import WeatherPage from "./pages/weather/WeatherPage";
+import "antd/dist/antd.css";
+import "./App.scss";
+import PublicRoute from "./components/privatePublicRout/PublicRoute";
+import PrivateRoute from "./components/privatePublicRout/PrivateRoute";
 
 function App() {
   return (
     <Router>
-      <Route component={LoginPage} path={"/login"} />
-      <Route component={Search} path={"/search"} />
-      <Route component={WeatherPage} path={"/"} exact />
+      <PublicRoute component={LoginPage} path={"/login"} restricted />
+      <PrivateRoute component={Search} path={"/search"} />
+      <PrivateRoute component={WeatherPage} path={"/"} exact />
 
       {/* add not found (404) component */}
       {/*<Route component={WeatherPage} />*/}

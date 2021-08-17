@@ -9,17 +9,23 @@ body {
   transform: translateX(-50%);
 }
 
+.flex-center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
 .global-input {
-  color: #ffffff;
-  height: 40px;
-  width: 280px;
-  margin: 10px 0.5px 0 0;
-  border: none;
-  border-bottom: 1px solid #efefef;
-  text-align: left;
-  padding-right: 3vh;
-  padding-left: 3vh;
-  background-color: unset;
+  color: #ffffff !important;
+  height: 40px !important;
+  width: 280px !important;
+  margin: 10px 0.5px 0 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #efefef !important;
+  text-align: left !important;
+  padding-right: 3vh !important;
+  padding-left: 3vh !important;
+  background-color: unset !important;
 
   &::placeholder {
     color: #fff;

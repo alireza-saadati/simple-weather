@@ -25,25 +25,8 @@
     color: #ffffff;
     width: 100%;
 
-    .first-line {
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    .second-line {
-      display: flex;
-      justify-content: space-evenly;
+    .second-row {
       padding-top: 5vh;
-    }
-    .global-output--box {
-      display: flex;
-      justify-content: center;
-      padding-top: 1vh;
-      padding-bottom: 1vh;
-
-      .global-output--text {
-        padding-bottom: 1vh;
-      }
     }
   }
 }
