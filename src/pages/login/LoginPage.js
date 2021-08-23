@@ -33,7 +33,7 @@ const LoginPage = () => {
       // 1. set mobile in local storage
       localStorage.setItem("mobile", mobile);
       // 1. set otpCode in local storage
-      localStorage.setItem("access_token", otpCode);
+      localStorage.setItem("s", otpCode);
       window.location.pathname = "/search";
       // history.push("/");
     } else if (mobile.length === 11) {

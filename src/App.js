@@ -6,6 +6,7 @@ import "antd/dist/antd.css";
 import "./App.scss";
 import PublicRoute from "./components/privatePublicRout/PublicRoute";
 import PrivateRoute from "./components/privatePublicRout/PrivateRoute";
+import Counter from "./pages/counter/Counter";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <PublicRoute component={LoginPage} path={"/login"} restricted />
       <PrivateRoute component={Search} path={"/search"} />
       <PrivateRoute component={WeatherPage} path={"/"} exact />
+      <PrivateRoute component={Counter} path={"/counter"} exact />
 
       {/* add not found (404) component */}
       {/*<Route component={WeatherPage} />*/}
